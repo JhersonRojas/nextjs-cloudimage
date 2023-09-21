@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-export function POST(request) {
-  const body = request
-  // console.log(body)
+export async function POST(request) {
+  const data = await request.formData();
+  console.log(data)
   return NextResponse.json({ msg: "repuesta de servidor"})
 }
